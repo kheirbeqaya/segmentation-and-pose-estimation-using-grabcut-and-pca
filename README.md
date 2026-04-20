@@ -27,6 +27,7 @@ A manually defined bounding box is used to initialize the segmentation process. 
 Let:
 
 ROI=(x,y,w,h)
+
 3. Foreground Segmentation via GrabCut
 
 We employ the GrabCut algorithm, formulated as a graph-cut optimization problem:
