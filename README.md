@@ -19,6 +19,7 @@ The proposed pipeline consists of the following sequential stages:
 1. Image Acquisition
 
 Input images are retrieved from remote sources and decoded into OpenCV-compatible format. Standard BGR-to-RGB conversion is applied for visualization consistency.
+![Input Image](data/images/LucasCurette_SpoonExcavator_Peridontal_Curette.png)
 
 2. Region of Interest Initialization
 
