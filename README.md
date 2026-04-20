@@ -39,6 +39,7 @@ Iterative refinement improves segmentation quality
 This yields an initial binary mask:
 
 M(x,y)∈{FG,BG}
+
 4. Morphological Post-Processing
 
 To enhance spatial consistency of segmentation:
@@ -84,6 +85,7 @@ Orientation vector:
 v=(vx​,vy​)
 Center:
 c=(μx​,μy​)
+
 8. Orientation Angle Estimation
 
 The tool angle relative to horizontal axis is computed as:
@@ -93,6 +95,7 @@ The tool angle relative to horizontal axis is computed as:
 Converted to degrees and normalized to:
 
 θ∈[0,180]
+
 9. Geometric Visualization
 
 Final visualization includes:
