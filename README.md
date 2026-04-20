@@ -51,6 +51,8 @@ M′=(M∘K)∙K
 
 where K is a structuring element.
 
+
+
 5. Connected Component Analysis
 
 To isolate the target object:
@@ -60,6 +62,9 @@ The largest connected component is selected:
 C*=arg max|Ci|
 
 This step ensures robustness against segmentation artifacts.
+
+![Input Image](data/images/segmented_tool.png)
+
 
 6. Contour Extraction
 
@@ -107,7 +112,10 @@ Blue color for the Reference horizontal axis
 
 Yellow color is for the Angular arc representing:
 
-Δθ=θ−0∘
+Δθ
+
+![Input Image](data/images/result.png)
+
 
 The arc is rendered using elliptical geometry for interpretability.
 
