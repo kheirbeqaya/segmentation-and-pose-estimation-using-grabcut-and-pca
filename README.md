@@ -44,9 +44,7 @@ To enhance spatial consistency of segmentation:
 
 Morphological Opening removes small noise artifacts
 Morphological Closing fills internal holes
-M
-′
-=(M∘K)∙K
+M′=(M∘K)∙K
 
 where K is a structuring element.
 
@@ -56,21 +54,7 @@ To isolate the target object:
 
 All connected regions are labeled
 The largest connected component is selected:
-C
-∗
-=arg
-C
-i
-	​
-
-max
-	​
-
-∣C
-i
-	​
-
-∣
+C*=arg max|Ci|
 
 This step ensures robustness against segmentation artifacts.
 
@@ -80,30 +64,13 @@ The boundary of the selected component is extracted using:
 
 cv2.findContours
 Contour is represented as a set of 2D points:
-P={(x
-i
-	​
-
-,y
-i
-	​
-
-)}
-i=1
-N
+P={(xi,yi)}i=1 ->N
 	​
 
 7. Dimensionality Reduction via PCA
 
 Principal Component Analysis is applied to contour points:
-
-Σ=
-N
-1
-	​
-
-∑(P−μ)(P−μ)
-T
+Σ=N1​∑(P−μ)(P−μ)T
 
 Eigen decomposition yields:
 
@@ -113,38 +80,14 @@ Mean point → geometric center
 Thus:
 
 Orientation vector:
-v=(v
-x
-	​
-
-,v
-y
-	​
-
-)
+v=(vx​,vy​)
 Center:
-c=(μ
-x
-	​
-
-,μ
-y
-	​
-
-)
+c=(μx​,μy​)
 8. Orientation Angle Estimation
 
 The tool angle relative to horizontal axis is computed as:
 
-θ=arctan2(v
-y
-	​
-
-,v
-x
-	​
-
-)
+θ=arctan2(vy​,vx​)
 
 Converted to degrees and normalized to:
 
@@ -159,8 +102,7 @@ Blue color for the Reference horizontal axis
 
 Yellow color is for the Angular arc representing:
 
-Δθ=θ−0
-∘
+Δθ=θ−0∘
 
 The arc is rendered using elliptical geometry for interpretability.
 
